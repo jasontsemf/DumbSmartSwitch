@@ -4,6 +4,8 @@
 <p>Project on <a href="https://github.com/jasontsemf/DumbSmartSwitch">GitHub</a></p>
 <!-- /wp:paragraph -->
 
+[SmartDumbSwitch demo on YouTube](http://img.youtube.com/vi/yBsMdon-vKU/0.jpg)
+
 [![SmartDumbSwitch demo on YouTube](http://img.youtube.com/vi/yBsMdon-vKU/0.jpg)](http://www.youtube.com/watch?v=yBsMdon-vKU "SmartDumbSwitch")
 
 [Blog link](https://jason1996429.wordpress.com/2021/02/11/ble-interactions-wk2-dumb-smart-switch/)
