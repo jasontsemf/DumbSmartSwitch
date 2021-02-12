@@ -10,9 +10,12 @@
 
 [Blog link](https://jason1996429.wordpress.com/2021/02/11/ble-interactions-wk2-dumb-smart-switch/)
 
-<!-- wp:jetpack/slideshow {"ids":[2317,2318,2319,2320,2321,2322],"sizeSlug":"large"} -->
-<div class="wp-block-jetpack-slideshow aligncenter" data-effect="slide"><div class="wp-block-jetpack-slideshow_container swiper-container"><ul class="wp-block-jetpack-slideshow_swiper-wrapper swiper-wrapper"><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2317" data-id="2317" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015906.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2318" data-id="2318" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015855.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2319" data-id="2319" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_020015.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2320" data-id="2320" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015933.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2321" data-id="2321" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015943.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2322" data-id="2322" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015957.jpg?w=739"/></figure></li></ul><a class="wp-block-jetpack-slideshow_button-prev swiper-button-prev swiper-button-white" role="button"></a><a class="wp-block-jetpack-slideshow_button-next swiper-button-next swiper-button-white" role="button"></a><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button"></a><div class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-white"></div></div></div>
-<!-- /wp:jetpack/slideshow -->
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015906.jpg?w=739" width="30%"></img>
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015855.jpg?w=739" width="30%"></img>
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015957.jpg?w=739" width="30%"></img> 
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_020015.jpg?w=739" width="30%"></img> 
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015933.jpg?w=739" width="30%"></img>
+<img src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015943.jpg?w=739" width="30%"></img>
 
 <!-- wp:preformatted -->
 <pre class="wp-block-preformatted">Disclaimer: This week's project is rather basic.</pre>
