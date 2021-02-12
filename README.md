@@ -1,10 +1,16 @@
 # Dumb Smart Switch
 
-[Blog link](https://jason1996429.wordpress.com/2021/02/11/ble-interactions-wk2-dumb-smart-switch/)
-
 <!-- wp:paragraph -->
 <p>Project on <a href="https://github.com/jasontsemf/DumbSmartSwitch">GitHub</a></p>
 <!-- /wp:paragraph -->
+
+[![SmartDumbSwitch demo on YouTube](http://img.youtube.com/vi/yBsMdon-vKU/0.jpg)](http://www.youtube.com/watch?v=yBsMdon-vKU "SmartDumbSwitch")
+
+[Blog link](https://jason1996429.wordpress.com/2021/02/11/ble-interactions-wk2-dumb-smart-switch/)
+
+<!-- wp:jetpack/slideshow {"ids":[2317,2318,2319,2320,2321,2322],"sizeSlug":"large"} -->
+<div class="wp-block-jetpack-slideshow aligncenter" data-effect="slide"><div class="wp-block-jetpack-slideshow_container swiper-container"><ul class="wp-block-jetpack-slideshow_swiper-wrapper swiper-wrapper"><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2317" data-id="2317" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015906.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2318" data-id="2318" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015855.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2319" data-id="2319" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_020015.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2320" data-id="2320" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015933.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2321" data-id="2321" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015943.jpg?w=739"/></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img alt="" class="wp-block-jetpack-slideshow_image wp-image-2322" data-id="2322" src="https://jason1996429.files.wordpress.com/2021/02/img_20210212_015957.jpg?w=739"/></figure></li></ul><a class="wp-block-jetpack-slideshow_button-prev swiper-button-prev swiper-button-white" role="button"></a><a class="wp-block-jetpack-slideshow_button-next swiper-button-next swiper-button-white" role="button"></a><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button"></a><div class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-white"></div></div></div>
+<!-- /wp:jetpack/slideshow -->
 
 <!-- wp:preformatted -->
 <pre class="wp-block-preformatted">Disclaimer: This week's project is rather basic.</pre>
@@ -47,7 +53,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Arduino Nano IoT 33<ul><li>the brain for driving the entire project</li><li>takes 5V USB power</li><li>has BLE connectivity for accessing it with my smartphone</li></ul></li><li>DS3231 Rtc (real time clock)module<ul><li>it keeps and tells time</li></ul></li><li><a href="https://www.adafruit.com/product/169?gclid=Cj0KCQiAyJOBBhDCARIsAJG2h5dvq7mFnts-v3AY0nxejoEeZZMW6g2N18gsuS4jWW6F7LTDEu5TvksaAvr0EALw_wcB">A mini servo</a><ul><li>drives pinion to push the light switch</li></ul></li><li>A custom 3D printed servo mount, gear, and pushed</li></ul>
+<ul><li>Arduino Nano IoT 33<ul><li>the brain for driving the entire project</li><li>takes 5V USB power</li><li>has BLE connectivity for accessing it with my smartphone</li></ul></li><li><a href="https://www.amazon.com/ACROBOTIC-Real-Time-AT24C32-Breakout-Raspberry/dp/B07HWXZZFP/ref=asc_df_B07HWXZZFP/?tag=hyprod-20&amp;linkCode=df0&amp;hvadid=241973970700&amp;hvpos=&amp;hvnetw=g&amp;hvrand=11909124479875763692&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9067609&amp;hvtargid=pla-574718114805&amp;psc=1">DS3231</a> Rtc (real time clock)module<ul><li>it keeps and tells time</li></ul></li><li><a href="https://www.adafruit.com/product/169?gclid=Cj0KCQiAyJOBBhDCARIsAJG2h5dvq7mFnts-v3AY0nxejoEeZZMW6g2N18gsuS4jWW6F7LTDEu5TvksaAvr0EALw_wcB">A mini servo</a><ul><li>drives pinion to push the light switch</li></ul></li><li>A custom 3D printed servo mount, gear, and pushed</li></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
@@ -94,145 +100,3 @@
 <ul><li><a href="https://github.com/arduino-libraries/ArduinoBLE/tree/master/examples/Peripheral/LED">https://github.com/arduino-libraries/ArduinoBLE/tree/master/examples/Peripheral/LED</a></li><li><a href="https://github.com/adafruit/RTClib/tree/master/examples/ds3231">https://github.com/adafruit/RTClib/tree/master/examples/ds3231</a></li><li><a href="https://github.com/arduino-libraries/Servo/tree/master/examples/Sweep">https://github.com/arduino-libraries/Servo/tree/master/examples/Sweep</a></li></ul>
 <!-- /wp:list -->
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>#include &lt;ArduinoBLE.h>
-#include &lt;Servo.h>
-// Date and time functions using a DS3231 RTC connected via I2C and Wire lib
-#include "RTClib.h"
-
-RTC_DS3231 rtc;
-//char daysOfTheWeek&#91;7]&#91;12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-Servo myservo;  // create servo object to control a servo
-int pos = 0;    // variable to store the servo position
-
-BLEService servoService("19B10000-E8F2-537E-4F6C-D104768A1214"); // BLE LED Service
-
-// BLE LED Switch Characteristic - custom 128-bit UUID, read and writable by central
-BLEByteCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic hourCharacteristic("19B10002-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic minuteCharacteristic("19B10003-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic repeatCharacteristic("19B10004-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-
-// time updating anc checking interval
-unsigned long previousMillis = 0;
-const long interval = 45000;  // 45 seconds
-
-void setup() {
-  Serial.begin(9600);
-//  while (!Serial);
-
-  // rtc setup
-  if (! rtc.begin()) {
-    Serial.println("Couldn't find RTC");
-    Serial.flush();
-    abort();
-  }
-
-  if (rtc.lostPower()) {
-    Serial.println("RTC lost power, let's set the time!");
-    // When time needs to be set on a new device, or after a power loss, the
-    // following line sets the RTC to the date &amp; time this sketch was compiled
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    // This line sets the RTC with an explicit date &amp; time, for example to set
-    // January 21, 2014 at 3am you would call:
-    // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
-  }
-
-  // servo setup
-  myservo.attach(2);  // attaches the servo on pin 9 to the servo object
-
-  // begin initialization
-  if (!BLE.begin()) {
-    Serial.println("starting BLE failed!");
-
-    while (1);
-  }
-
-  // set advertised local name and service UUID:
-  BLE.setLocalName("Servo");
-  BLE.setAdvertisedService(servoService);
-
-  // add the characteristic to the service
-  servoService.addCharacteristic(switchCharacteristic);
-  servoService.addCharacteristic(hourCharacteristic);
-  servoService.addCharacteristic(minuteCharacteristic);
-  servoService.addCharacteristic(repeatCharacteristic);
-
-  // add service
-  BLE.addService(servoService);
-
-  // set the initial value for the characeristic:
-  switchCharacteristic.writeValue(0);
-  hourCharacteristic.writeValue(0);
-  minuteCharacteristic.writeValue(1);
-  repeatCharacteristic.writeValue(1);
-
-  // start advertising
-  BLE.advertise();
-
-  Serial.println("BLE LED Peripheral");
-}
-
-void loop() {
-  // update millis
-  unsigned long currentMillis = millis();
-
-  if (currentMillis - previousMillis >= interval) {
-    // save the last time you blinked the LED
-    previousMillis = currentMillis;
-
-    DateTime now = rtc.now();
-    if (repeatCharacteristic.value()) {               // check if it is set to repeat daily
-//      Serial.print(hourCharacteristic.value());
-      // check if it is the right time to push button
-      if (now.hour() == hourCharacteristic.value()
-          &amp;&amp; now.minute() == minuteCharacteristic.value()) {
-        moveServo();
-      }
-    }
-  }
-
-  // listen for BLE peripherals to connect:
-  BLEDevice central = BLE.central();
-
-  // if a central is connected to peripheral:
-  if (central) {
-    Serial.print("Connected to central: ");
-    // print the central's MAC address:
-    Serial.println(central.address());
-
-    // while the central is still connected to peripheral:
-    while (central.connected()) {
-      // if the remote device wrote to the characteristic,
-      // use the value to control the LED:
-      if (switchCharacteristic.written()) {
-        if (switchCharacteristic.value()) {   // any value other than 0
-          moveServo();
-          switchCharacteristic.writeValue(0);
-        } else {                              // a 0 value
-          //          Serial.println(F("nothing"));
-        }
-      }
-    }
-
-    // when the central disconnects, print it out:
-    Serial.print(F("Disconnected from central: "));
-    Serial.println(central.address());
-  }
-
-
-}
-
-void moveServo() {
-  Serial.println("move servo");
-  for (pos = 0; pos &lt;= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
-  }
-  for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
-  }
-}</code></pre>
-<!-- /wp:code -->
