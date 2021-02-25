@@ -89,8 +89,8 @@ void loop() {
     if (repeatCharacteristic.value()) {               // check if it is set to repeat daily
 //      Serial.print(hourCharacteristic.value());
       // check if it is the right time to push button
-      if (now.hour() == hourCharacteristic.value()
-          && now.minute() == minuteCharacteristic.value()) {
+      if (now.hour() == int(hourCharacteristic.value())
+          && now.minute() == int(minuteCharacteristic.value())) {
         moveServo();
       }
     }
