@@ -11,10 +11,10 @@ int pos = 0;    // variable to store the servo position
 BLEService servoService("19B10000-E8F2-537E-4F6C-D104768A1214"); // BLE LED Service
 
 // BLE LED Switch Characteristic - custom 128-bit UUID, read and writable by central
-BLEByteCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic hourCharacteristic("19B10002-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic minuteCharacteristic("19B10003-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
-BLEByteCharacteristic repeatCharacteristic("19B10004-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite);
+BLEIntCharacteristic switchCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite | BLENotify);
+BLEIntCharacteristic hourCharacteristic("19B10002-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite | BLENotify);
+BLEIntCharacteristic minuteCharacteristic("19B10003-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite | BLENotify);
+BLEIntCharacteristic repeatCharacteristic("19B10004-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite | BLENotify);
 
 // time updating anc checking interval
 unsigned long previousMillis = 0;
@@ -52,7 +52,7 @@ void setup() {
   }
 
   // set advertised local name and service UUID:
-  BLE.setLocalName("Servo");
+  BLE.setLocalName("DumbSmartSwitch");
   BLE.setAdvertisedService(servoService);
 
   // add the characteristic to the service
@@ -73,7 +73,7 @@ void setup() {
   // start advertising
   BLE.advertise();
 
-  Serial.println("BLE LED Peripheral");
+  Serial.println("BLE Servo Peripheral");
 //  moveServo();
 }
 
@@ -98,6 +98,7 @@ void loop() {
 
   // listen for BLE peripherals to connect:
   BLEDevice central = BLE.central();
+
 
   // if a central is connected to peripheral:
   if (central) {
@@ -124,17 +125,20 @@ void loop() {
     Serial.println(central.address());
   }
 
-
+//  BLE.poll();
+//  switchCharacteristic.writeValue(0);
 }
 
 void moveServo() {
   Serial.println("move servo");
-  for (pos = 0; pos <= 80; pos += 1) { // goes from 0 degrees to 180 degrees
+
+
+  for (pos = 130; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
     // in steps of 1 degree
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(10);                       // waits 15ms for the servo to reach the position
   }
-  for (pos = 80; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    for (pos = 180; pos >= 130; pos -= 1) { // goes from 180 degrees to 0 degrees
     myservo.write(pos);              // tell servo to go to position in variable 'pos'
     delay(10);                       // waits 15ms for the servo to reach the position
   }
